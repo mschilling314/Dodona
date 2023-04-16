@@ -1,7 +1,7 @@
-name: Run textScript
+name: Run texting.py
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   test:
@@ -22,5 +22,5 @@ jobs:
           TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
         run: |
           source .venv/bin/activate
-          cd Twilio
+          cd twilio_integration
           python textScript.py
